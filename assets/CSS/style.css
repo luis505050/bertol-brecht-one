@@ -1,0 +1,271 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Carousel */
+.container-carousel-saludo {
+    overflow: hidden;    
+}
+#sec-img img {
+    height: 40em; 
+}
+/*responsive para el carrusel*/
+
+@media (max-width: 768px){
+    #sec-img img{
+        height: 30em ;
+    } 
+}
+
+@media (max-width: 480px) {
+
+    .container-imagenes-y-tips img {
+        height: 30em ;
+    }
+
+    .container-videos video {
+        max-width: 100%;
+    }
+}
+
+/* Info Section */
+.container-info-conocenos {
+    font-family: 'outfit';
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffd700; /* Fondo amarillo */
+    padding: 50px 100px;
+    gap: 50px;
+}
+
+.info-left {
+    max-width: 50%;
+}
+
+.info-right-view {
+    max-width: 40%;
+}
+
+.content-parrafo h2 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.content-parrafo p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.bnt-leer-mas a {
+    display: inline-block;
+    text-decoration: none;
+    color: #3f3f3f;
+    padding: 12px 30px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.bnt-leer-mas a:hover {
+    color: #000 ;
+}
+
+.container-videos h2 {
+    font-size: 24px;
+    color: #000;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.container-videos video {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 1024px) {
+    .container-info-conocenos {
+        flex-wrap: wrap;
+        padding: 30px;
+    }
+
+    .info-left, .info-right-view {
+        max-width: 100%;
+    }
+
+    .content-parrafo h2 {
+        font-size: 32px;
+    }
+
+    .content-parrafo p {
+        font-size: 16px;
+    }
+
+    .bnt-leer-mas a {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container-info-conocenos {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .info-right-view {
+        order: -1; /* Mueve el video encima del texto */
+    }
+
+    .content-parrafo h2 {
+        font-size: 28px;
+    }
+
+    .content-parrafo p {
+        font-size: 14px;
+    }
+
+    .bnt-leer-mas a {
+        font-size: 12px;
+        padding: 8px 20px;
+    }
+    .container-videos video {
+        width: 100%;
+        height: 250px;
+    }
+}
+
+
+/* Carrusel Card Styles */
+.carrusel-tips {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    width: 100%; 
+}
+
+.card {
+    max-width: 540px;
+    width: 100%; 
+}
+
+.card img {
+    width: 100%; 
+    height: 250px ; 
+}
+
+.card-body {
+    padding: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .card {
+        max-width: 100%; 
+    }
+
+    .card img {
+        max-width: 100%; 
+        height: auto; 
+    }
+
+    .carrusel {
+        padding: 10px;
+    }
+}
+
+/* Favoritismo Section */
+.container-favoritismo {
+    font-family: 'outfit';
+    padding: 20px;
+    text-align: center;
+    background-color: #e2e2e2;
+    margin: 30px 0;
+}
+/* Contenedor principal */
+#por-que-elegirnos {
+    padding: 20px;
+    background-color: #d3d3d3; /* Color de fondo suave */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Título principal */
+#por-que-elegirnos h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #343a40; /* Color de texto oscuro */
+}
+
+/* Botón "Leer más" */
+
+#por-que-elegirnos .btn-primary  {
+    background-color: #007bff; /* Color del botón */
+    border: none; /* Sin borde */
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px; /* Bordes redondeados del botón */
+}
+#por-que-elegirnos a {
+    color: #fff;
+}
+
+#por-que-elegirnos .btn-primary:hover {
+    background-color: #0056b3; /* Color del botón al pasar el cursor */
+}
+
+/* Filas y columnas */
+#por-que-elegirnos .row {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las columnas se ajusten */
+    justify-content: space-around; /* Espacio alrededor de las columnas */
+    margin-top: 20px;
+}
+
+#por-que-elegirnos .col-md-3 {
+    flex: 1 1 22%; /* Toma un 22% del espacio en pantallas medianas y grandes */
+    max-width: 22%;
+    margin-bottom: 20px;
+}
+
+#por-que-elegirnos .col-sm-6 {
+    flex: 1 1 45%; /* Toma un 45% del espacio en pantallas pequeñas */
+    max-width: 45%;
+    margin-bottom: 20px;
+}
+
+/* Títulos de subsecciones */
+#por-que-elegirnos h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #001aff; /* Color del título */
+    margin-bottom: 10px;
+}
+
+/* Párrafos */
+#por-que-elegirnos p {
+    font-size: 1rem;
+    color: #000000; /* Color de texto gris suave */
+    line-height: 1.5; /* Altura de línea para una mejor legibilidad */
+}
+
+/* Responsivo adicional para pantallas pequeñas */
+@media (max-width: 768px) {
+    #por-que-elegirnos .col-md-3, 
+    #por-que-elegirnos .col-sm-6 {
+        flex: 1 1 100%; /* Las columnas ocupan el 100% del ancho en pantallas pequeñas */
+        max-width: 100%;
+    }
+
+    #por-que-elegirnos {
+        padding: 10px; /* Reduce el padding en pantallas pequeñas */
+    }
+}
+/* calendario */

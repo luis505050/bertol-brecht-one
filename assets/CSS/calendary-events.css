@@ -1,0 +1,144 @@
+/* General Styles */
+.calendary-content {
+    margin: 20px 0;
+    padding: 0;
+    font-family:'outfit';
+    background-color: #4A1E1E;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 390px;
+}
+
+@media (min-width: 768px) and (max-width: 1366px) {
+    .calendary-content{
+        max-width: 100%;
+    }
+}
+
+.calendary-content h2{
+    font-size: 22px; 
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+/* Carousel Styles */
+.carousel-calendary {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.carousel-wrapper {
+    position: relative; /* Asegura que las flechas estén fuera pero con posición relativa */
+}
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden; /* Esto sigue asegurando que el contenido del carrusel no se desborde */
+}
+
+.events-wrapper {
+    display: flex;
+    gap: 15px;
+    transition: transform 0.5s ease-in-out;
+    width: 80%;
+    height: 250px;
+    font-weight: bold;
+}
+
+.event-block {
+    flex: 0 0 340px; /* Asegura que cada bloque tenga un tamaño fijo */
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.event-block .month {
+    font-size: 40px; /* Aumentado tamaño de fuente */
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.event-block .day {
+    font-size: 72px; /* Aumentado tamaño de fuente */
+    font-weight: bold;
+    margin: 0;
+}
+
+.event-block .event-title {
+    font-size: 18px; /* Aumentado tamaño de fuente */
+    margin-top: 10px;
+    line-height: 1.4;
+    font-weight: bold;
+}
+
+/* Block Colors */
+.green {
+    background-color: #D8F013 ;
+}
+
+.blue {
+    background-color: #FF2511;
+}
+
+.red {
+    background-color: #FF7930;
+}
+
+.yellow {
+    background-color: #0E86D4;
+    color: #000;
+}
+
+/* Flechas fuera del carrusel */
+.arrow {
+    background: transparent;
+    border: none;
+    color: #000;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+.arrow:hover{
+    font-size: 50px;
+    color: #1f1f1f;
+}
+
+.arrow-left {
+    left: -5px; 
+    padding: 0 10px;
+    
+}
+
+.arrow-right {
+    right: -5px; 
+    padding: 0 10px; 
+}
+
+.show-all {
+    margin-top: 20px;
+    margin-bottom: 20px ;
+    padding: 10px 20px;
+    border: none;
+    background-color: rgb(138, 138, 138);
+    color: #4A1E1E;
+    font-size: 16px; /* Aumentado tamaño de fuente */
+    cursor: pointer;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.show-all:hover {
+    background-color: #000000;
+    font-size: 20px;
+    color: white;
+}

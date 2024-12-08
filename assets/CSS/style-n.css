@@ -1,0 +1,133 @@
+.noticias-eventos {
+    padding: 20px;
+    background-color: white;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.noticias-eventos h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.noticias-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.noticia {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.noticia:hover {
+    transform: scale(1.05);
+}
+
+.noticia img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.noticia h3 {
+    color: #333;
+    padding: 15px;
+    font-size: 1.25em;
+}
+
+.noticia p {
+    padding: 0 15px 15px;
+    color: #555;
+    font-size: 1em;
+}
+
+.leer-mas {
+    display: block;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    transition: background-color 0.2s;
+}
+#ver-mas {
+    display: block;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 8px;
+    transition: background-color 0.2s;
+    width: 100%;
+}
+
+.leer-mas:hover {
+    background-color: #0056b3;
+}
+#ver-mas:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos de paginación */
+.paginacion {
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.paginacion a {
+    color: #007bff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.paginacion a:hover {
+    background-color: #f0f0f0;
+}
+
+.paginacion .active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.paginacion .prev, .paginacion .next {
+    font-weight: bold;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .noticias-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .noticia {
+        width: 80%;
+    }
+
+    .paginacion {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+}

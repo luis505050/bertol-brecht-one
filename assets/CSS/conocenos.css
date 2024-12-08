@@ -1,0 +1,225 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* imagenes de saludo card */
+.card {
+    position: relative ;
+    overflow: hidden ;
+    width: 100%;
+    max-width: 100%; /* Ajusta el ancho máximo según lo necesites */
+    margin: 20px auto; /* Centra la tarjeta y añade espacio alrededor */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Opcional: sombra alrededor de la tarjeta */
+}
+
+.card-img {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+    height: 500px; /* Mantiene la relación de aspecto de la imagen */
+    display: block; /* Elimina el espacio debajo de la imagen */
+}
+
+.card-img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    }
+
+.card:hover .card-img-overlay {
+    background: rgba(46, 46, 46, 0); 
+    background: rgba(138, 138, 138, 0.5); /* Fondo semitransparente para el texto */
+    transition: background 0.3s ease; /* Transición suave para el fondo */
+}
+
+.card-title {
+    font-size: 2rem; /* Ajusta el tamaño de la fuente del título */
+    margin-top: 200px ;
+    font-family:'Franklin Gothic Medium' ;
+    
+}
+@media (max-width: 768px) {
+    .card-img  {
+        max-width: 100%; 
+        height: 350px;
+        display: block; 
+    }
+    .card-title{
+        margin-top: 90px;
+        text-align: center;
+    }
+
+}
+/*  */
+#quienes-somos{
+    margin-top: 20px;
+    background: linear-gradient(to right, white, rgb(98, 131, 219), rgb(98, 131, 219), white);
+}
+
+/* Título principal */
+#quienes-somos h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #343a40; /* Color de texto oscuro */
+    padding-top: 15px ;
+    margin-bottom: -10px;
+    text-align: center; /* Alinea el texto al centro */
+}
+
+/* Estilo de las columnas */
+#quienes-somos .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; /* Alineación vertical centrada */
+}
+
+#quienes-somos .col-md-8 {
+    flex: 1; /* El texto ocupa más espacio */
+    max-width: 70%; /* El texto ocupa el 70% del contenedor */
+}
+
+#quienes-somos .col-md-4 {
+    flex: 1; /* La imagen ocupa menos espacio */
+    max-width: 29%; /* La imagen ocupa el 30% del contenedor */
+}
+
+/* Texto alineado a la izquierda */
+#quienes-somos p {
+    font-size: 1rem;
+    color: #000000; /* Color de texto gris suave */
+    line-height: 1.5; /* Altura de línea para una mejor legibilidad */
+    text-align: left;
+    margin: 0 20px 0 0; /* Espacio a la derecha para separar del borde de la imagen */
+    padding: 20px  0 0 20px ;
+}
+
+/* Imagen alineada a la derecha */
+#quienes-somos img {
+    max-width: 100%; /* Imagen ocupa el 100% del ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 10px ; /* Bordes redondeados de la imagen */
+    margin-bottom: 20px;
+}
+
+/* Responsivo para pantallas más pequeñas */
+@media (max-width: 768px) {
+    #quienes-somos .row {
+        flex-direction: column; /* Coloca los elementos en columnas */
+    }
+
+    #quienes-somos .col-md-8,
+    #quienes-somos .col-md-4 {
+        max-width: 100%; /* Ambos divs ocupan el 100% del ancho */
+    }
+    
+    #quienes-somos p {
+        margin: 10px 0 20px 0; /* Quita el margen derecho y agrega margen inferior */
+        text-align: center; /* Centra el texto en pantallas pequeñas */
+    }
+    
+    #quienes-somos img {
+        max-width: 80%; /* Asegura que la imagen ocupe el 80% del ancho disponible */
+        height: auto;
+        margin: 0 auto 20px auto; /* Centra la imagen y agrega un margen inferior */
+        display: block; /* Asegura que la imagen se comporte como un bloque */
+    }
+}
+
+/*  */
+#quienes-somos-1{
+    margin-top: 20px;
+    background-color: #d4d7d8;
+    background: linear-gradient(to right, white, rgb(182, 182, 192), white);
+    
+}
+
+/* Título principal */
+#quienes-somos-1 h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #343a40; /* Color de texto oscuro */
+    margin-bottom: 10px;
+    padding-top: 15px ;
+    
+    text-align: center; /* Alinea el texto al centro */
+}
+
+/* Estilo de las columnas */
+#quienes-somos-1 .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; /* Alineación vertical centrada */
+}
+
+#quienes-somos-1 .col-md-8 {
+    flex: 1; /* El texto ocupa más espacio */
+    max-width: 70%; /* El texto ocupa el 70% del contenedor */
+}
+
+#quienes-somos-1 .col-md-4 {
+    flex: 1; /* La imagen ocupa menos espacio */
+    max-width: 30%; /* La imagen ocupa el 30% del contenedor */
+}
+
+/* Texto alineado a la izquierda */
+#quienes-somos-1 p {
+    font-size: 1rem;
+    color: #000000; /* Color de texto gris suave */
+    line-height: 1.5; /* Altura de línea para una mejor legibilidad */
+    text-align: left;
+    margin: 20px ; /* Espacio a la derecha para separar del borde de la imagen */
+    margin-bottom: 50px ;
+    padding: 20px  0 0 20px ;
+}
+#quienes-somos p {
+    font-size: 1rem;
+    color: #000000; /* Color de texto gris suave */
+    line-height: 1.5; /* Altura de línea para una mejor legibilidad */
+    text-align: left;
+    margin: 20px ; /* Espacio a la derecha para separar del borde de la imagen */
+    margin-bottom: 50px ;
+    padding: 20px  0 0 20px ;
+}
+
+/* Imagen alineada a la derecha */
+#quienes-somos-1 img {
+    max-width: 100%; /* Imagen ocupa el 100% del ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 10px; /* Bordes redondeados de la imagen */
+    margin-bottom: 20px;
+    margin: 15px;
+}
+
+/* Responsivo para pantallas más pequeñas */
+@media (max-width: 768px) {
+    #quienes-somos-1 .row {
+        flex-direction: column; /* Coloca los elementos en columnas */
+    }
+
+    #quienes-somos-1 .col-md-8,
+    #quienes-somos-1 .col-md-4 {
+        max-width: 100%; /* Ambos divs ocupan el 100% del ancho */
+    }
+    
+    #quienes-somos-1 p {
+        margin: 10px 0 20px 0; /* Quita el margen derecho y agrega margen inferior */
+        text-align: center; /* Centra el texto en pantallas pequeñas */
+    }
+    
+    #quienes-somos-1 img {
+        max-width: 80%; /* Asegura que la imagen ocupe el 80% del ancho disponible */
+        height: auto;
+        margin: 0 auto 20px auto; /* Centra la imagen y agrega un margen inferior */
+        display: block; /* Asegura que la imagen se comporte como un bloque */
+    }
+}
+

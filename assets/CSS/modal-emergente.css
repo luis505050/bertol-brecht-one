@@ -1,0 +1,176 @@
+/* Estilo para el fondo y el modal */
+.modal {
+    display: block; /* Se muestra por defecto cuando se carga la página */
+    position: fixed; /* Fija la posición sobre la página */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Para que se superponga al contenido */
+    animation: fadeIn 1s ease-in-out; /* Animación para que el modal aparezca */
+}
+
+/* Animación para el fade-in del modal */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Contenido del modal */
+.modal-content {
+    position: absolute;
+    max-width: 80%;
+    max-height: 80%;
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    animation: slideIn 0.5s ease-in-out;
+}
+
+/* Animación para el contenido del modal (entrada deslizante) */
+@keyframes slideIn {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-image {
+    width: 100%;
+    height: auto;
+    max-height: 500px; /* Limita el tamaño máximo de la imagen */
+    object-fit: cover;
+}
+
+/* Botón de cierre (X) */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: #000;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+}
+
+/* Estilo para el contenido principal de la página */
+.main-content {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Estilo adicional para evitar que el contenido de la página sea visible detrás del modal */
+body.modal-open {
+    overflow: hidden; /* Deshabilita el desplazamiento cuando el modal está abierto */
+}
+/*  */
+/*  */
+/*  */
+
+/* Images and Tips */
+.container-imagenes-y-tips {
+    display: flex;
+    gap: 20px;
+    padding: 20px 20px;       
+    background: linear-gradient(to right, white, rgb(182, 182, 192), white);
+    margin-bottom: 20px ;
+    border: 2px solid #000;
+}
+
+.container-imagenes-y-tips h2 {
+    text-align: center;
+    color: #000;
+    font-size: 24px;
+    width: 75%;
+    padding-top: 200px;
+}
+
+.container-imagenes-y-tips .carrusel {
+    display: flex;
+    overflow: hidden;
+    height: 200px;
+    width: 100%;
+}
+
+.container-imagenes-y-tips .carrusel img {
+    flex: 1;
+    height: 100%;
+    object-fit: cover;
+}
+.card{
+    display: flex;
+    margin: 30px ;
+}
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .container-imagenes-y-tips{        
+        flex-wrap: wrap;
+    }
+    .container-imagenes-y-tips h2{
+        width: 100%;
+        padding: 0px;
+    }
+    .carrusel-tips {
+        flex-direction: column; /* Coloca las tarjetas en una columna */
+        align-items: center;    /* Centra las tarjetas horizontalmente */
+    }
+    .container-imagenes-y-tips img{
+        height: 100%;
+    }
+    .card {
+        flex: 1 1 auto;        
+        max-width: 100%;       
+    }
+}
+/* Estilos para el botón */
+.btn-tips {
+    background-color: #007bff; 
+    color: white;              
+    border: none;              
+    padding: 10px 20px;        
+    font-size: 16px;           
+    cursor: pointer;          
+    border-radius: 5px;        
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;    
+    display: inline-block;   
+    text-align: center;    
+}
+
+.btn-tips:hover {
+    background-color: #0056b3; 
+    transform: scale(1.05);   
+}
+
+/* Estilos para el enlace dentro del botón */
+.btn-tips a {
+    color: white;           
+    text-decoration: none;  
+}
+/* modal */
+.modal-body iframe {
+    width: 100%;
+}
+@media (min-width: 768) {
+    .modal-dialog {
+        max-width: 90%;
+        margin: auto;
+    }
+    
+    .modal-body iframe {
+        height: 400px; /* Ajusta la altura para pantallas pequeñas */
+    }
+}

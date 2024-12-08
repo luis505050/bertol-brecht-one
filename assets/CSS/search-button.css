@@ -1,0 +1,92 @@
+ /* Contenedor principal (incluye el carrusel y el botón) */
+ .container-carousel-saludo {
+     position: relative;
+     /* Para que los elementos hijos puedan ser posicionados en relación a él */
+     width: 100%;
+     /* Hace que el contenedor ocupe toda la altura de la ventana */
+ }
+
+ /* Contenedor del botón */
+ .button-container {
+     position: absolute;
+     /* Lo posicionamos dentro del contenedor */
+     bottom: 5px;
+     /* Lo coloca un poco por encima del borde inferior */
+     left: 50%;
+     transform: translateX(-50%);
+     z-index: 3;
+     /* Asegura que esté por encima del carrusel */
+ }
+
+ @media (max-width:768px) {
+     .button-container {
+         bottom: 5px;
+     }
+
+     .arrow-button {
+         width: 60px;
+         height: 50px;
+     }
+ }
+
+ /* Estilo del botón - Medio círculo */
+ .arrow-button {
+     background-color: #28a745;
+     color: white;
+     border: none;
+     width: 110px;
+     height: 65px;
+     cursor: pointer;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     position: relative;
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+     overflow: hidden;
+     padding: 0;
+     border-radius: 50%;
+ }
+
+ /* Ajustar las imágenes dentro del botón */
+ .arrow-image {
+     width: 40px;
+     height: 40px;
+     object-fit: contain;
+     position: absolute;
+ }
+
+ /* Posiciona la imagen superior */
+ .top-arrow {
+     top: 0;
+     left: 50%;
+     transform: translateX(-50%);
+ }
+
+ /* Posiciona la imagen inferior */
+ .bottom-arrow {
+     bottom: 0;
+     left: 50%;
+     transform: translateX(-50%);
+ }
+
+ /* Curva en la parte superior del botón */
+ .arrow-button::before {
+     content: '';
+     position: absolute;
+     top: -10px;
+     /* Ajusta la distancia para la curva */
+     left: 0;
+     width: 100%;
+     height: 20px;
+     background-color: #28a745;
+     /* Mismo color verde */
+     border-radius: 50%;
+ }
+
+ /* Efecto de hover */
+ .arrow-button:hover {
+     background-color: #218838;
+     /* Color más oscuro al hacer hover */
+     transform: scale(1.1);
+     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+ }
